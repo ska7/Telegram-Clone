@@ -1,0 +1,6 @@
+.main-layout-container {
+  @apply bg-dark-grey flex-3 h-screen;
+  background-image: url("https://web.telegram.org/z/chat-bg-pattern-dark.ad38368a9e8140d0ac7d..png");
+  mix-blend-mode: unset;
+  background-size: 510px auto;
+}

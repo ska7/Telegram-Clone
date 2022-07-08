@@ -8,6 +8,10 @@ module.exports = {
         4: "4",
         5: "5",
       },
+      colors: {
+        "sidebar-gray": "rgb(33, 33, 33)",
+        "dark-grey": "#0f0f0f",
+      },
     },
   },
   plugins: [],
