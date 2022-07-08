@@ -1,9 +1,6 @@
 import * as React from "react";
+import AppLayout from "./containers/layout";
 
 export const App = () => {
-  return (
-    <div>
-      <p>Telegram Clone</p>
-    </div>
-  );
+  return <AppLayout />;
 };
