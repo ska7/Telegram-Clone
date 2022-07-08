@@ -16,6 +16,11 @@ module.exports = {
     rules: [
       { test: /\.ts|tsx$/, exclude: /node_modules/, use: "ts-loader" },
       {
+        test: /\.css$/i,
+        include: path.resolve(__dirname, "src"),
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: "babel-loader",

@@ -1,5 +1,9 @@
 import * as React from "react";
 
 export const App = () => {
-  return <div>Telegram Clone</div>;
+  return (
+    <div>
+      <p>Telegram Clone</p>
+    </div>
+  );
 };
