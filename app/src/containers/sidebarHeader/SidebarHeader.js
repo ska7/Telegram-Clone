@@ -1,12 +1,12 @@
 import * as React from "react";
 import SearchField from "../../components/searchField/SearchField";
-import UserMenu from "../../components/userMenu/UserMenu";
+import UserMenuButton from "../../components/userMenuButton/UserMenuButton";
 import "./sidebarHeaderStyles.css";
 
 const SidebarHeader = () => {
   return (
     <div className="side-layout-header">
-      <UserMenu />
+      <UserMenuButton />
       <SearchField />
     </div>
   );
