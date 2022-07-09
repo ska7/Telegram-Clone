@@ -23,17 +23,24 @@ module.exports = {
       {
         test: /\.less$/i,
         include: path.resolve(__dirname, "src"),
-        use: ["style-loader", "css-loader", "postcss-loader", "less-loader"],
+        use: ["style-loader", "css-loader", "less-loader", "postcss-loader"],
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: "babel-loader",
       },
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack"],
+      },
     ],
   },
   resolve: {
-    extensions: [".jsx", ".ts", ".tsx", ".js", ".css"],
+    extensions: [".jsx", ".ts", ".tsx", ".js", ".css", ".svg"],
+    alias: {
+      icons: path.resolve(__dirname, "assets/icons"),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -1,8 +1,11 @@
 .search-field {
-  @apply flex-6 relative w-full h-full;
+  @apply flex-6 relative flex w-full h-full;
   max-width: calc(100% - 3.25rem);
   transition: border-color 0.15s ease;
+  svg {
+    @apply absolute top-0 bottom-0 my-auto ml-4 text-gray h-3.5;
+  }
   input {
-    @apply h-full w-full bg-light-grey rounded-2xxl;
+    @apply h-full w-full bg-light-grey rounded-[22px] pl-11;
   }
 }
