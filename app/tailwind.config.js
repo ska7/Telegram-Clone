@@ -18,6 +18,7 @@ module.exports = {
         gray: "rgb(170,170,170)",
         "light-grey": "rgb(48, 48, 48)",
         "dark-grey": "#0f0f0f",
+        primary: "rgb(135, 116, 225)",
       },
     },
   },

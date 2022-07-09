@@ -6,6 +6,10 @@
     @apply absolute top-0 bottom-0 my-auto ml-4 text-gray h-3.5;
   }
   input {
-    @apply h-full w-full bg-light-grey rounded-[22px] pl-11;
+    @apply h-full w-full bg-light-grey rounded-[22px] pl-11 border-2 border-transparent text-white font-normal text-base font-sans;
+    transition: border-color 0.3s ease;
+    &:focus {
+      @apply border-2 border-primary outline-none caret-primary;
+    }
   }
 }

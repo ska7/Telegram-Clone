@@ -7,7 +7,7 @@ import RippleContainer from "../../containers/rippleContainer/RippleContainer";
 interface IUserMenu {}
 
 const UserMenu: React.FC<IUserMenu> = () => {
-  const handleMenuClick = (event: any): void => {
+  const handleMenuClick = (event: React.MouseEvent<HTMLDivElement>): void => {
     console.log(event);
   };
   return (
