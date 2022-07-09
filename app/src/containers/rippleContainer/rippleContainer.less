@@ -1,0 +1,54 @@
+@-webkit-keyframes ripple-animation {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes ripple-animation {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.ripple-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: all 0.15s ease;
+  @apply flex justify-center items-center;
+  body.animation-level-0 & {
+    display: none;
+  }
+
+  .ripple {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    display: block;
+    @apply bg-gray/30 rounded-full;
+    transform: scale(0);
+    animation: ripple-animation 700ms;
+  }
+}
