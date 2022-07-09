@@ -21,6 +21,11 @@ module.exports = {
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
+        test: /\.less$/i,
+        include: path.resolve(__dirname, "src"),
+        use: ["style-loader", "css-loader", "postcss-loader", "less-loader"],
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: "babel-loader",
