@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./styles.css";
+import "./mainLayout.less";
 
 const MainLayout = () => {
   return <div className="main-layout-container"></div>;

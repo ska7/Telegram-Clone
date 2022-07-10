@@ -1,10 +1,21 @@
 .user-menu-container {
+  position: relative;
   min-width: 17rem;
   max-height: calc(100 * 7.89px - 3.75rem);
   box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(16, 16, 16, 0.611765);
   background-color: rgba(33, 33, 33, 0.866667);
   padding: 0.25rem 0;
   @apply rounded-xl;
+
+  .backdrop {
+    border: "1px solid green";
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .user-menu-options {
+  }
 }
 
 .open {
@@ -13,13 +24,4 @@
 
 .close {
   transform: scale(0);
-}
-
-.backdrop {
-  position: fixed;
-  left: -100vw;
-  right: -100vw;
-  top: -100vh;
-  bottom: -100vh;
-  z-index: 20;
 }

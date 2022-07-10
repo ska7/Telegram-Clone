@@ -4,7 +4,7 @@ import "./rippleContainer.less";
 
 interface IRippleContainer {
   children?: React.ReactNode;
-  onClick?: (event: React.MouseEvent<HTMLDivElement>) => void;
+  onClick?: () => void;
 }
 
 const RippleContainer: React.FC<IRippleContainer> = ({ children, onClick }) => {
@@ -22,7 +22,7 @@ const RippleContainer: React.FC<IRippleContainer> = ({ children, onClick }) => {
     });
     setIsRippling(true);
 
-    onClick && onClick(event);
+    onClick && onClick();
   };
 
   useEffect(() => {

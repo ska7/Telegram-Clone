@@ -1,7 +1,8 @@
-import * as React from "react";
-import SideLayout from "./sideLayout";
-import MainLayout from "./mainLayout";
 import "./styles";
+
+import * as React from "react";
+import MainLayout from "./mainLayout/MainLayout";
+import SideLayout from "./sideLayout/SideLayout";
 
 const AppLayout = () => {
   return (
