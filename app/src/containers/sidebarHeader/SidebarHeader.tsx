@@ -4,21 +4,12 @@ import * as React from "react";
 import SearchField from "../../components/searchField/SearchField";
 import UserMenuButton from "../../components/userMenuButton/UserMenuButton";
 
-interface ISidebarHeader {
-  isUserMenuOpen: boolean;
-  toggleUserMenu: () => void;
-}
+interface ISidebarHeader {}
 
-const SidebarHeader: React.FC<ISidebarHeader> = ({
-  isUserMenuOpen,
-  toggleUserMenu,
-}) => {
+const SidebarHeader: React.FC<ISidebarHeader> = ({}) => {
   return (
     <div className="side-layout-header">
-      <UserMenuButton
-        handleButtonClick={toggleUserMenu}
-        isButtonActive={isUserMenuOpen}
-      />
+      <UserMenuButton />
       <SearchField />
     </div>
   );

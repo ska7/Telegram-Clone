@@ -1,13 +1,12 @@
 import "./userMenu.less";
 
 import * as React from "react";
+import { useToggleUserMenu } from "../../../hooks/useToggleUserMenu";
 
-interface IUserName {
-  isUserMenuOpen: boolean;
-  toggleUserMenu: () => void;
-}
+interface IUserName {}
 
-const UserMenu: React.FC<IUserName> = ({ isUserMenuOpen, toggleUserMenu }) => {
+const UserMenu: React.FC<IUserName> = () => {
+  const { isUserMenuOpen, toggleUserMenu } = useToggleUserMenu();
   return (
     <div className={`user-menu-container ${isUserMenuOpen ? "open" : "close"}`}>
       <div className="backdrop" onClick={toggleUserMenu} />
