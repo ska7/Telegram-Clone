@@ -1,3 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --z-backdrop: 15;
+    --z-modal: 16;
+  }
+}
+
+/* 
+ANIMATIONS
+*/
+
+@keyframes open-animation {
+  0% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    transform-origin: left top;
+    opacity: 0;
+  }
+  25% {
+    transform: scale(0.25);
+    -webkit-transform: scale(0.25);
+    transform-origin: left top;
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform-origin: left top;
+    opacity: 0.5;
+  }
+  75% {
+    transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    transform-origin: left top;
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: left top;
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes close-animation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transform-origin: left top;
+  }
+  25% {
+    opacity: 0.6;
+    transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    transform-origin: left top;
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform-origin: left top;
+  }
+  75% {
+    opacity: 0.1;
+    transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+    transform-origin: left top;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0.5);
+    transform-origin: left top;
+  }
+}

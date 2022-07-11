@@ -1,27 +1,32 @@
 .user-menu-container {
-  position: relative;
-  min-width: 17rem;
   max-height: calc(100 * 7.89px - 3.75rem);
-  box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(16, 16, 16, 0.611765);
-  background-color: rgba(33, 33, 33, 0.866667);
   padding: 0.25rem 0;
-  @apply rounded-xl;
+  transition: opacity 0.2s cubic-bezier(0.2, 0, 0.2, 1),
+    transform 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+  @apply absolute top-0 bottom-0 h-screen;
+
+  &:not(.show) {
+    display: none;
+  }
 
   .backdrop {
-    border: "1px solid green";
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
+    @apply h-full w-screen z-[var(--z-backdrop)] relative;
   }
 
   .user-menu-options {
+    box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(16, 16, 16, 0.611765);
+    backdrop-filter: blur(10px);
+    &:not(.open) {
+      animation: close-animation 200ms forwards;
+    }
+    @apply z-[var(--z-modal)] absolute top-[52px] left-3 rounded-xl bg-sidebar-gray/80 min-w-[17rem] py-1;
   }
 }
 
 .open {
-  transform: scale(1);
+  animation: open-animation 200ms forwards;
 }
 
 .close {
-  transform: scale(0);
+  animation: close-animation 200ms forwards;
 }

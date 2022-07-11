@@ -2,8 +2,8 @@ import "./userMenuButton.less";
 
 import * as React from "react";
 import MenuIcon from "icons/menu-icon.svg";
-import RippleContainer from "../../containers/rippleContainer/RippleContainer";
-import { useToggleUserMenu } from "../../hooks/useToggleUserMenu";
+import RippleContainer from "../../../containers/rippleContainer/RippleContainer";
+import { useToggleUserMenu } from "../../../hooks/useToggleUserMenu";
 
 interface IUserMenu {}
 

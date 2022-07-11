@@ -2,7 +2,7 @@ import "./sidebarHeaderStyles.css";
 
 import * as React from "react";
 import SearchField from "../../components/searchField/SearchField";
-import UserMenuButton from "../../components/userMenuButton/UserMenuButton";
+import UserMenuButton from "../../components/userMenu/userMenuButton/UserMenuButton";
 
 interface ISidebarHeader {}
 
