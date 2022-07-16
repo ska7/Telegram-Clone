@@ -1,8 +1,8 @@
 import "./styles";
 
 import * as React from "react";
-import MainLayout from "./mainLayout/MainLayout";
-import SideLayout from "./sideLayout/SideLayout";
+import MainLayout from "./main";
+import SideLayout from "./sidebar";
 
 const AppLayout = () => {
   return (

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import cls from "classnames";
 import { useToggleUserMenu } from "../../../hooks/useToggleUserMenu";
 import { userMenuOptionsMock } from "../../../__mocks__/userMenuOptionsMock";
-import UserMenuOption from "../../../components/userMenu/userMenuOption/UserMenuOption";
+import UserMenuOption from "./menuOption/UserMenuOption";
 
 interface IUserName {}
 
