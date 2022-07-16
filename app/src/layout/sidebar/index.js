@@ -8,7 +8,6 @@ const SideLayout = () => {
   return (
     <div className="side-layout-container">
       <SidebarHeader />
-      <UserMenu />
     </div>
   );
 };

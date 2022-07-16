@@ -1,6 +1,7 @@
 import * as React from "react";
 import BookmarkIcon from "icons/bookmark-icon.svg";
 import PersonIcon from "icons/person-icon.svg";
+import GearIcon from "icons/gear-icon.svg";
 
 type MenuOption = {
   icon: React.ReactNode;
@@ -8,7 +9,7 @@ type MenuOption = {
   label?: React.ReactNode | string;
 };
 
-export const userMenuOptionsMock: MenuOption[] = [
+export const userMenuOptions: MenuOption[] = [
   {
     icon: <BookmarkIcon />,
     optionName: "Saved Messages",
@@ -16,5 +17,9 @@ export const userMenuOptionsMock: MenuOption[] = [
   {
     icon: <PersonIcon />,
     optionName: "Contacts",
+  },
+  {
+    icon: <GearIcon />,
+    optionName: "Settings",
   },
 ];

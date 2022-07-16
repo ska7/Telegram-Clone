@@ -15,7 +15,6 @@ const RippleContainer: React.FC<IRippleContainer> = ({ children, onClick }) => {
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const rect = rippleContainerRef.current.getBoundingClientRect();
-    console.log(rect);
     setCoords({
       x: event.clientX - rect.left - 10,
       y: event.clientY - rect.top - 10,

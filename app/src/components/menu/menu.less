@@ -1,0 +1,32 @@
+.menu-container {
+  max-height: calc(100 * 7.89px - 3.75rem);
+  padding: 0.25rem 0;
+  transition: opacity 0.2s cubic-bezier(0.2, 0, 0.2, 1),
+    transform 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+  @apply absolute top-0 bottom-0 h-screen;
+
+  &:not(.show) {
+    display: none;
+  }
+
+  .backdrop {
+    @apply h-full w-screen z-[var(--z-backdrop)] relative;
+  }
+
+  .menu-options {
+    box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(16, 16, 16, 0.611765);
+    backdrop-filter: blur(10px);
+    &:not(.open) {
+      animation: close-animation 200ms forwards;
+    }
+    @apply z-[var(--z-modal)] absolute top-[52px] rounded-xl bg-sidebar-gray/80 min-w-[17rem] py-1;
+  }
+}
+
+.open {
+  animation: open-animation 200ms forwards;
+}
+
+.close {
+  animation: close-animation 200ms forwards;
+}

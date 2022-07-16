@@ -39,8 +39,10 @@ module.exports = {
   resolve: {
     extensions: [".jsx", ".ts", ".tsx", ".js", ".css", ".svg"],
     alias: {
-      icons: path.resolve(__dirname, "assets/icons"),
+      icons: path.resolve(__dirname, "src/assets/icons"),
       components: path.resolve(__dirname, "src/components"),
+      hooks: path.resolve(__dirname, "src/hooks"),
+      data: path.resolve(__dirname, "src/data"),
     },
   },
   plugins: [
