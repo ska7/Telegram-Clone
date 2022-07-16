@@ -9,6 +9,7 @@ interface ISidebarHeader {}
 const SidebarHeader: React.FC<ISidebarHeader> = ({}) => {
   return (
     <div className="side-layout-header">
+      {/* Move user menu button inside user menu container and import it here */}
       <UserMenuButton />
       <SearchField />
     </div>

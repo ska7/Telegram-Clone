@@ -40,6 +40,7 @@ module.exports = {
     extensions: [".jsx", ".ts", ".tsx", ".js", ".css", ".svg"],
     alias: {
       icons: path.resolve(__dirname, "assets/icons"),
+      components: path.resolve(__dirname, "src/components"),
     },
   },
   plugins: [
